@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const passport = require("passport")
 
-const CLIENT_URL = "http://localhost:3000/user"
+const CLIENT_URL = "https://prathipan-authentication.netlify.app/user"
 
 router.get("/login/success", (req, res) => {
     if (req.user) {
@@ -24,7 +24,7 @@ router.get("/login/success", (req, res) => {
   
   router.get("/logout", (req, res) => {
     req.logout();
-    res.redirect("http://localhost:3000");
+    res.redirect("https://prathipan-authentication.netlify.app");
   });
 
 router.get("/google", passport.authenticate('google',{
